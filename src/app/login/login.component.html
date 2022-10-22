@@ -1,0 +1,13 @@
+<div class="container">
+  <div>
+    <span> username</span>
+    <input type="text" name="username" [(ngModel)]="username">
+  </div>
+  <div>
+    <span> Password</span>
+    <input type="password" name="password" [(ngModel)]="password">
+  </div>
+  <div>
+    <button (click)="checkLogin()" class="btn btn-success">Login</button>
+  </div>
+</div>

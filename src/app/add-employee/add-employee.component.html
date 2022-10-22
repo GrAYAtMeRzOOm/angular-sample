@@ -1,0 +1,18 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add employee</h2>
+  <form>
+    <div class="form-group">
+      <label for="id">Employee ID</label>
+      <input type="text" [ngModel]="user.empId" class="form-control" id="id" placeholder="EMP1" name="id">
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" [ngModel]="user.name" class="form-control" id="name" placeholder="Name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="designation">designation</label>
+      <input type="text" [ngModel]="user.designation" class="form-control" id="designation" placeholder="designation" name="designation">
+    </div>
+    <button class="btn btn-success" (click)="createEmployee()">Create</button>
+  </form>
+</div>
