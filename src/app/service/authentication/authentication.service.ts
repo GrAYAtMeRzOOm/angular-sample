@@ -19,12 +19,14 @@ export class AuthenticationService {
 
   isUserLoggedIn() {
     let user = sessionStorage.getItem("username");
-
     console.log(!user == null);
-    console.log(sessionStorage.length);
     return !(user == null);
   }
   setUserLogout(){
+    if(this.isUserLoggedIn()){
     sessionStorage.removeItem("username");
+    }else{
+      alert("cannot find user");
+    }
   }
 }

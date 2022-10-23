@@ -6,7 +6,7 @@ import {AuthenticationService} from "../authentication/authentication.service"
   providedIn: "root"
 })
 
-export class AuthGurdService implements CanActivate{
+export class AuthGuardService implements CanActivate{
   constructor(private router : Router,private authService : AuthenticationService) {
 
   }
@@ -14,7 +14,7 @@ export class AuthGurdService implements CanActivate{
     if(this.authService.isUserLoggedIn()){
       return true;
     }
-    this.router.navigate(['login']);
+    this.router.navigate(['login']).then(r => alert("Cannot Find User plz login"));
     return false;
   }
 }

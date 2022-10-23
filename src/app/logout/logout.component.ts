@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
   styleUrls: ['logout.component.css']
 })
 
-export class LogoutComponent implements OnInit {
+export class LogoutComponent {
   constructor(
     private authenticationService: AuthenticationService,
     private router: Router
@@ -17,6 +17,6 @@ export class LogoutComponent implements OnInit {
 
   ngOnInit() {
     this.authenticationService.setUserLogout();
-    this.router.navigate(['login']);
+    this.router.navigate(['login']).then(r => alert("User Session Closed"));
   }
 }
